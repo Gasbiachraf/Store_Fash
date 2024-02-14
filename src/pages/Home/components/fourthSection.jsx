@@ -36,8 +36,7 @@ export const FourthSection = () => {
                                 <div className='border px-2 py-1 text-xl'>
                                     <p className='m-0'>-1871</p>
                                     <p className='m-0'>days</p>
-                                </div>
-                               
+                                </div>                           
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 
+import { FifthSection } from './components/fifthSection';
 import { FirstSectionHome } from './components/firstSection';
 import { FourthSection } from './components/fourthSection';
 import { SecondSectionHome } from './components/secondSection';
@@ -10,6 +11,7 @@ export const HomePage = () => {
             <SecondSectionHome/>
             <ThirdSectionHome/>
             <FourthSection/>
+            <FifthSection/>
         </>
     );
 }

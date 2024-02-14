@@ -9,7 +9,7 @@ export const ThirdSectionHome = () => {
 
 
     let [product, useProduct] = useContext(MyContext)
-    const [category, setCategory] = useState('Sale')
+    const [category, setCategory] = useState('Old')
     const [specificCategory, setSpecificCategory] = useState([])
     useEffect(() => {
         const ChoiceCategory = () => {
