@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 
 export const NavbarFashe = () => {
     return (
-        <Navbar fluid rounded className='bg-[#f0f0f0] py-4'>
-            <Navbar.Brand href="https://flowbite-react.com">
-                <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <Navbar fluid rounded className='bg-white  py-4'>
+            <Navbar.Brand className='ml-10' href="https://flowbite-react.com">
+                <img src={logo} className="mr-3 h-6 sm:h-7 " alt="Flowbite React Logo" />
 
             </Navbar.Brand>
             <div className="flex items-center md:order-2 pr-2">

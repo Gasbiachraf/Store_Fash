@@ -13,7 +13,7 @@ export const FirstSectionAbout = () => {
             <div className='flex justify-center '>
                 <div className='flex  w-[80%] justify-center py-24 items-end'>
                     <div className='overflow-hidden  w-[30%] flex justify-center mr-10  '>
-                        <img className='hover:scale-125 ' src={woman} alt="" />
+                        <img className='duration-500 hover:scale-105 ' src={woman} alt="" />
                     </div>
                     <div className=' w-[60%] text-[#939393]'>
                         <p className='text-3xl  text-black pb-4'>Our story</p>
