@@ -14,10 +14,10 @@ function App() {
     <MyProvider>
         <NavbarFashe/>
         <Routes >
-            <Route path='/fash' element={<HomePage />} />
-            <Route path='/fash/about' element={<AboutPage />} />
-            <Route path='/fash/contact' element={<ContactPage />} />
-            <Route path='/fash/shop' element={<ShopPage />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/shop' element={<ShopPage />} />
             <Route path='/*' element={<ErrorPage />} />
         </Routes >
         <FooterFashe/>

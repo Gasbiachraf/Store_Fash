@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import bgImage from '../../../assets/img/heading-pages-02.jpg'
 import { MyContext } from '../../../utils/ContextProvider';
 import { CiSearch } from "react-icons/ci";
+import './firstSection.sass'
 
 
 export const FirstSectionShop = () => {
@@ -10,16 +11,36 @@ export const FirstSectionShop = () => {
 
     let [product, useProduct] = useContext(MyContext)
     const [category, setCategory] = useState('Old')
+    const [categoryPrice, setCategoryPrice] = useState([0,20])
+    const [categoryPriceLenght, setCategoryPriceLenght] = useState([])
     const [specificCategory, setSpecificCategory] = useState([])
+    let arrayOld = product.filter(element => element.category == 'Old');
+    let arraySale = product.filter(element => element.category == 'Sale');
+    let arrayNew = product.filter(element => element.category == 'New');
     useEffect(() => {
         const ChoiceCategory = () => {
             let array = product.filter(element => element.category == category);
+            let arrayPrice = array.filter(element => ((element.price > categoryPrice[0]) && (element.price <= categoryPrice[1])))
+            console.log( categoryPrice[0]);
+            console.log( categoryPrice[1]);
+            setCategoryPriceLenght(arrayPrice)
 
-            setSpecificCategory(array)
+            setSpecificCategory(arrayPrice)
         }
         ChoiceCategory()
-    }, [category]);
-    console.log(category);
+    }, [categoryPrice , category]);
+
+    const TextChange = (parames) => {
+        if (parames == 'Old') {
+            return (`Showing  ${categoryPriceLenght.length} of ${arrayOld.length} items`)
+        } else if (parames == 'New') {
+            return (`Showing  ${categoryPriceLenght.length} of ${arrayNew.length} items`)
+        } else if (parames == 'Sale') {
+            return (`Showing  ${categoryPriceLenght.length} of ${arraySale.length} items`)
+        }
+
+    }
+
     return (
         <>
             <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
@@ -27,37 +48,35 @@ export const FirstSectionShop = () => {
             </div>
             <div className="flex justify-center py-10">
                 <div className="flex justify-between w-[80%]">
-                    <div className='w-[20%]'>
+                    <div className='w-[20%] '>
                         <div className='flex flex-col  pb-6'>
                             <b className='text-xl pb-4'>Categories</b>
-                            <button className='text-start pb-2' onClick={() => setCategory('Old')} >Old</button>
-                            <button className='text-start pb-2' onClick={() => setCategory('Sale')} >Sale</button>
-                            <button className='text-start pb-2' onClick={() => setCategory('New')} >New</button>
+                            <button className='text-start pb-2' onClick={() => setCategory('Old')} >Old ({arrayOld.length} items)</button>
+                            <button className='text-start pb-2' onClick={() => setCategory('Sale')} >Sale ({arraySale.length} items)</button>
+                            <button className='text-start pb-2' onClick={() => setCategory('New')} >New ({arrayNew.length} items)</button>
                         </div>
                         <div className='flex flex-col  pb-6'>
                             <b className='text-xl pb-4'>Price</b>
                             <form className='flex flex-col' action="">
                                 <div>
-                                    <input type='radio' name='achraf' />
+                                    <input onClick={()=>{setCategoryPrice([0 , 20])}} type='radio' name='achraf' />
                                     <label className='pl-2' htmlFor="">0-20</label>
                                 </div>
                                 <div>
-                                    <input type='radio' name='achraf' />
+                                    <input onClick={()=>{setCategoryPrice([20 , 40])}} type='radio' name='achraf' />
                                     <label className='pl-2' htmlFor="">20-40</label>
                                 </div>
                             </form>
                         </div>
-                        <div className=" flex justify-between items-center border my-1">
+                        <div className=" flex justify-between items-center border mt-4 ">
                             <form action="">
                                 <input placeholder='Search...' className='border-0' type="text" />
                             </form>
                             <CiSearch className='text-2xl' />
-
                         </div>
-
                     </div>
                     <div className="w-[75%]  ">
-                        <div className=' flex justify-between'>
+                        <div className=' flex justify-between '>
                             <div className="items-center  my-1  w-[40%]">
                                 <div className=' gap-4 flex justify-between w-[100%] '>
                                     <select className='bg-transparent w-[100%]' name="" id="">
@@ -77,11 +96,15 @@ export const FirstSectionShop = () => {
                                 </div>
                             </div>
                             <div>
-                                <p>Showing 1 to 6 of 8 items</p>
+                                <p>
+                                    {
+                                        TextChange(category)
+                                    }
+                                </p>
                             </div>
                         </div>
 
-                        <div className=" h-screen overflow-y-auto profilScroll flex justify-center w-[100%] mt-8">
+                        <div className=" h-screen overflow-y-auto scroll flex justify-center w-[100%] mt-8">
                             <div className="w-[100%] flex flex-wrap gap-4 pb-20">
                                 {
                                     specificCategory.map((element, index) =>

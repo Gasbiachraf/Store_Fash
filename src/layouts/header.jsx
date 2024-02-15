@@ -22,10 +22,10 @@ export const NavbarFashe = () => {
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
-                <Link to={"/fash"} active>Home</Link>
-                <Link to={"/fash/shop"}>Shop</Link>
-                <Link to={"/fash/about"}>About</Link>
-                <Link to={"/fash/contact"}>Contact</Link>
+                <Link to={"/"} active>Home</Link>
+                <Link to={"/shop"}>Shop</Link>
+                <Link to={"/about"}>About</Link>
+                <Link to={"/contact"}>Contact</Link>
             </Navbar.Collapse>
         </Navbar>
     );

@@ -28,7 +28,7 @@ export const MyProvider = ({ children }) => {
             id : 0,
             img : item1,
             text : 'boxy1 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 21 , 
             category : 'Old'
         },
         {
@@ -42,14 +42,14 @@ export const MyProvider = ({ children }) => {
             id : 2,
             img : item3,
             text : 'boxy3 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 22 , 
             category : 'Old'
         },
         {
             id : 3,
             img : item4,
             text : 'boxy4 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 18 , 
             category : 'New'
         },
         {
@@ -63,49 +63,49 @@ export const MyProvider = ({ children }) => {
             id : 5,
             img : item6,
             text : 'boxy6 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 27 , 
             category : 'New'
         },
         {
             id : 6,
             img : item7,
             text : 'boxy7 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 35 , 
             category : 'New'
         },
         {
             id : 7,
             img : item8,
             text : 'boxy8 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 16 , 
             category : 'New'
         },
         {
             id : 9,
             img : item10,
             text : 'boxy10 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 18 , 
             category : 'Old'
         },
         {
             id : 10,
             img : item11,
             text : 'boxy11 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 24 , 
             category : 'Sale'
         },
         {
             id : 11,
             img : item12,
             text : 'boxy12 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 40 , 
             category : 'Sale'
         },
         {
             id : 12,
             img : item13,
             text : 'boxy13 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 33 , 
             category : 'Sale'
         },
         {
@@ -119,14 +119,14 @@ export const MyProvider = ({ children }) => {
             id : 14,
             img : item15,
             text : 'boxy15 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 19 , 
             category : 'Sale'
         },
         {
             id : 15,
             img : item16,
             text : 'boxy16 t-shirt with roll sleeve ',
-            price : 20 , 
+            price : 16 , 
             category : 'Sale'
         },
     ])
