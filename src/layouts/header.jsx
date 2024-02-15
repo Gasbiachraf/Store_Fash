@@ -5,19 +5,32 @@ import logo from '../assets/img/logo.png'
 import avatare from '../assets/img/avatar-man.webp'
 import { SlBasket } from "react-icons/sl";
 import { FaRegCircleUser } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export const NavbarFashe = () => {
+    const navigate = useNavigate()
     return (
-        <Navbar fluid rounded className='bg-white  py-4'>
+        <Navbar fluid rounded className='bg-white  py-4 border-b-2'>
             <Navbar.Brand className='ml-10' href="https://flowbite-react.com">
                 <img src={logo} className="mr-3 h-6 sm:h-7 " alt="Flowbite React Logo" />
 
             </Navbar.Brand>
             <div className="flex items-center md:order-2 pr-2">
-                <FaRegCircleUser className='text-2xl'/> <span className='text-2xl text-[#dad7d0] px-3'>|</span>
+                <FaRegCircleUser onClick={() => { navigate('./account') }} className='text-2xl' /> <span className='text-2xl text-[#dad7d0] px-3'>|</span>
                 <SlBasket className='text-2xl' />
+
+
+                {/*  */}
+                
+
+
+                
+
+
+
+                {/*  */}
+
 
                 <Navbar.Toggle />
             </div>

@@ -8,6 +8,8 @@ import { ContactPage } from './pages/contact/contact';
 import { ShopPage } from './pages/Shop/shop';
 import { NavbarFashe } from './layouts/header';
 import { FooterFashe } from './layouts/footer';
+import { AccountPage } from './pages/Account/Account';
+import { RegisterPage } from './pages/Register/register';
 function App() {
     return (
 
@@ -18,7 +20,10 @@ function App() {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/shop' element={<ShopPage />} />
+            <Route path='/account' element={<AccountPage />} />
+            <Route path='/account/register' element={<RegisterPage />} />
             <Route path='/*' element={<ErrorPage />} />
+
         </Routes >
         <FooterFashe/>
 
