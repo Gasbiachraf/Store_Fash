@@ -34,7 +34,7 @@ export const FifthSection = () => {
                         {
                             content.map((element, index) =>
                                 <>
-                                    <div className="w-[100%]   flex flex-col  ">
+                                    <div className="w-[100%]   flex flex-col  max-[430px]:pb-8 ">
                                         <div className="overflow-hidden">
                                             <img className="hover:scale-125 duration-500" src={element.img} alt="" />
                                         </div>
@@ -45,17 +45,17 @@ export const FifthSection = () => {
                                 </>)
                         }
                     </div>
-                    <b className="text-4xl py-24">@ FOLLOW US ON INSTAGRAM</b>
+                    <b className="text-4xl py-24 max-[430px]:text-center max-[430px]:text-3xl max-[430px]:py-8">@ FOLLOW US ON INSTAGRAM</b>
                     <div className="flex w-[100%] justify-between pt-4 items-center pb-20 max-[430px]:flex-col">
-                        <div className="text-center">
+                        <div className="text-center max-[430px]:pb-6">
                             <p className="text-xl text-[#666666]">Free Delivery Worldwide</p>
                             <p className="text-sm text-[#9d9797]">Mirum est notare quam littera gothica</p>
                         </div>
-                        <div className="border-x-2 px-36 py-4 text-center max-[430px]:border-x-0 max-[430px]:px-0 ">
+                        <div className="border-x-2 px-36 py-4 text-center max-[430px]:border-x-0 max-[430px]:px-0  max-[430px]:pb-8">
                             <p className="text-xl text-[#666666]">30 Days Return</p>
                             <p className="text-sm text-[#9d9797]">Simply return it within 30 days for an exchange.</p>
                         </div>
-                        <div className="text-center">
+                        <div className="text-center max-[430px]:pb-8">
                             <p className="text-xl text-[#666666]">Store Opening</p>
                             <p className="text-sm text-[#9d9797]">Shop open from Monday to Sunday</p>
                         </div>

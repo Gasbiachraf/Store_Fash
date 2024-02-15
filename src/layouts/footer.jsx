@@ -5,9 +5,9 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 
 export const FooterFashe = () => {
     return (
-        <Footer className='bg-[#f0f0f0] rounded-none px-6'>
+        <Footer className='bg-[#f0f0f0] rounded-none px-6 max-[430px]:px-3'>
             <div className="w-full">
-                <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-3">
+                <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-3 max-[430px]:flex-col  max-[430px]:flex max-[430px]:p-0  ">
                     <div>
                         <Footer.Title className='text-black text-xl' title="Git in toush" />
                         <Footer.LinkGroup col>
@@ -21,7 +21,7 @@ export const FooterFashe = () => {
                             </div>
                         </Footer.LinkGroup>
                     </div>
-                    <div className='flex gap-20 '>
+                    <div className='flex gap-20 max-[430px]:flex-col  max-[430px]:flex  max-[430px]:gap-10 '>
                         <div>
                             <Footer.Title className='text-black text-xl' title="CATEGORIES" />
                             <Footer.LinkGroup col>
@@ -50,7 +50,7 @@ export const FooterFashe = () => {
                             </Footer.LinkGroup>
                         </div>
                     </div>
-                    <div className='flex flex-col pl-20 '>
+                    <div className='flex flex-col pl-20  max-[430px]:pl-0'>
                         <Footer.Title className='text-black text-xl'  title="NEWSLETTER" />
                         <Footer.LinkGroup col>
                             <input placeholder='Email address' className='bg-transparent w-[80%] border-b-2 outline-none border-0  active:border-0' type="text" />
@@ -58,7 +58,7 @@ export const FooterFashe = () => {
                         </Footer.LinkGroup>
                     </div>
                 </div>
-                <div className='text-center pt-10 pb-8'>
+                <div className='text-center pt-10 pb-8 max-[430px]: pt-16'>
                     <p className='text-[#b9b7b5]'>Copyright © 2022 Shopify Theme Developed by MassTechnologist All rights reserved.</p>
                 </div>
 

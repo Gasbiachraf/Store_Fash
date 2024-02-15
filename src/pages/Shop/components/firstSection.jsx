@@ -47,8 +47,8 @@ export const FirstSectionShop = () => {
                 <p className='text-5xl py-20 text-center text-white'> PRODUCTS </p>
             </div>
             <div className="flex justify-center py-10">
-                <div className="flex justify-between w-[80%]">
-                    <div className='w-[20%] '>
+                <div className="flex justify-between w-[80%] max-[430px]:w-[90vw] max-[430px]:flex-col">
+                    <div className='w-[20%] max-[430px]:w-[100%]'>
                         <div className='flex flex-col  pb-6'>
                             <b className='text-xl pb-4'>Categories</b>
                             <button className='text-start pb-2' onClick={() => setCategory('Old')} >Old ({arrayOld.length} items)</button>
@@ -75,10 +75,10 @@ export const FirstSectionShop = () => {
                             <CiSearch className='text-2xl' />
                         </div>
                     </div>
-                    <div className="w-[75%]  ">
-                        <div className=' flex justify-between '>
-                            <div className="items-center  my-1  w-[40%]">
-                                <div className=' gap-4 flex justify-between w-[100%] '>
+                    <div className="w-[75%]  max-[430px]:w-[90vw] max-[430px]:pt-8">
+                        <div className=' flex justify-between  max-[430px]:flex-col '>
+                            <div className="  my-1  w-[40%] max-[430px]:w-[100%]  max-[430px]:pb-1 ">
+                                <div className=' gap-4 flex justify-between w-[100%] max-[430px]:w-[55%]  max-[430px]:flex-col'>
                                     <select className='bg-transparent w-[100%]' name="" id="">
                                         <option value="">Lorem1</option>
                                         <option value="">Lorem2</option>
@@ -104,13 +104,13 @@ export const FirstSectionShop = () => {
                             </div>
                         </div>
 
-                        <div className=" h-screen overflow-y-auto scroll flex justify-center w-[100%] mt-8">
-                            <div className="w-[100%] flex flex-wrap gap-4 pb-20">
+                        <div className=" h-screen overflow-y-auto  flex max-[430px]:flex-col justify-center w-[100%] mt-8 max-[430px]:mt-4">
+                            <div className="w-[100%] flex flex-wrap  gap-4 pb-20 max-[430px]:h-[100%]">
                                 {
                                     specificCategory.map((element, index) =>
                                         < >
-                                            <div className=" flex flex-col w-[32%] pb-6">
-                                                <img src={element.img} alt="" />
+                                            <div key={index} className=" flex flex-col w-[32%] max-[430px]:w-[100%]    pb-6">
+                                                <img className=' ' src={element.img} alt="" />
                                                 <p className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
                                                 <div className="flex justify-between text-[#767676]">
                                                     <p className="text-xl">${element.price} </p>
