@@ -6,24 +6,18 @@ import photo from "../../../assets/img/banner-02.jpg";
 
 export const ThirdSectionHome = () => {
 
-
-
     let [product, useProduct] = useContext(MyContext)
     const [category, setCategory] = useState('Old')
     const [specificCategory, setSpecificCategory] = useState([])
     useEffect(() => {
         const ChoiceCategory = () => {
             let array = product.filter(element => element.category == category);
-            setSpecificCategory(array)
-            console.log(array);
-            console.log(specificCategory);
+            let array4 = array.slice(0 , 4)      
+            setSpecificCategory(array4)
         }
         ChoiceCategory()
     }, [category]);
     console.log(category);
-
-
-
 
     return (
         <>
@@ -41,7 +35,6 @@ export const ThirdSectionHome = () => {
                                 < >
                                     <div className=" flex flex-col w-[23%] ">
                                         <img src={element.img} alt="" />
-
                                         <p className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
                                         <div className="flex justify-between text-[#767676]">
                                             <p className="text-xl">${element.price} </p>

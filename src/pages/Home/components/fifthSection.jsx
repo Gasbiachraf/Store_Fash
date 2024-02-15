@@ -28,7 +28,7 @@ export const FifthSection = () => {
     return (
         <>
             <div className="flex justify-center pt-12">
-                <div className="flex flex-col items-center   w-[80%] pb-16">
+                <div className="flex flex-col items-center   w-[80%] pb-16npm">
                     <b className="text-4xl py-10">OUR BLOG</b>
                     <div className="flex gap-4 pb-4">
                         {
@@ -46,7 +46,7 @@ export const FifthSection = () => {
                         }
                     </div>
                     <b className="text-4xl py-24">@ FOLLOW US ON INSTAGRAM</b>
-                    <div className="flex w-[100%] justify-between pt-4 items-center ">
+                    <div className="flex w-[100%] justify-between pt-4 items-center pb-20">
                         <div className="text-center">
                             <p className="text-xl text-[#666666]">Free Delivery Worldwide</p>
                             <p className="text-sm text-[#9d9797]">Mirum est notare quam littera gothica</p>

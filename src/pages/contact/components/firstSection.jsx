@@ -32,7 +32,6 @@ export const FirstSectionContact = () => {
         <>
         <div  style={{backgroundImage :`url(${bgImage})`, backgroundSize :"cover"}}>
            <p className='text-5xl py-20 text-center text-white'> CONTACT </p>
-
         </div>
         <div className='flex  justify-center py-24 items-center'>
             <div className='mr-10'>
