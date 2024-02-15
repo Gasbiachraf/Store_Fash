@@ -30,7 +30,7 @@ export const FifthSection = () => {
             <div className="flex justify-center pt-12">
                 <div className="flex flex-col items-center   w-[80%] pb-16npm">
                     <b className="text-4xl py-10">OUR BLOG</b>
-                    <div className="flex gap-4 pb-4">
+                    <div className="flex gap-4 max-[430px]:flex-col pb-4">
                         {
                             content.map((element, index) =>
                                 <>
@@ -46,12 +46,12 @@ export const FifthSection = () => {
                         }
                     </div>
                     <b className="text-4xl py-24">@ FOLLOW US ON INSTAGRAM</b>
-                    <div className="flex w-[100%] justify-between pt-4 items-center pb-20">
+                    <div className="flex w-[100%] justify-between pt-4 items-center pb-20 max-[430px]:flex-col">
                         <div className="text-center">
                             <p className="text-xl text-[#666666]">Free Delivery Worldwide</p>
                             <p className="text-sm text-[#9d9797]">Mirum est notare quam littera gothica</p>
                         </div>
-                        <div className="border-x-2 px-36 py-4 text-center ">
+                        <div className="border-x-2 px-36 py-4 text-center max-[430px]:border-x-0 max-[430px]:px-0 ">
                             <p className="text-xl text-[#666666]">30 Days Return</p>
                             <p className="text-sm text-[#9d9797]">Simply return it within 30 days for an exchange.</p>
                         </div>

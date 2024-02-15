@@ -29,11 +29,11 @@ export const ThirdSectionHome = () => {
             </div>
             <div>
                 <div className="flex justify-center w-[100%]">
-                    <div className="w-[80%] flex flex-wrap gap-6 pb-20">
+                    <div className="w-[80%] flex  flex-wrap gap-6 pb-20">
                         {
                             specificCategory.map((element, index) =>
                                 < >
-                                    <div className=" flex flex-col w-[23%] ">
+                                    <div key={index} className=" flex flex-col w-[23%] max-[430px]:w-[96%] max-[430px]:items-center">
                                         <img src={element.img} alt="" />
                                         <p className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
                                         <div className="flex justify-between text-[#767676]">
@@ -43,11 +43,9 @@ export const ThirdSectionHome = () => {
                                     </div>
                                 </>)
                         }
-
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

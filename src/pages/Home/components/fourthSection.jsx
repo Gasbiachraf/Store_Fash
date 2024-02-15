@@ -6,7 +6,7 @@ export const FourthSection = () => {
     return (
         <>
             <div className="flex justify-center bg-[#f0f0f0] py-16">
-                <div className=" flex w-[80%] gap-8">
+                <div className=" flex w-[80%] gap-8 max-[430px]:flex-col max-[430px]:w-[90%]">
                     <div className=' relative overflow-hidden '>
                         <img className='duration-200 hover:scale-125 w-[100]' src={imageRight} alt="..." />
                         <div className='absolute text-white text-center  transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 '>

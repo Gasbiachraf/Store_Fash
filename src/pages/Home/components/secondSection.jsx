@@ -10,7 +10,7 @@ export const SecondSectionHome = () => {
     return (
         <>
             <section className='flex justify-center pb-8'>
-                <div className='w-[78%] flex gap-8 py-10'>
+                <div className='w-[78%] flex max-[430px]:flex-col gap-8 py-10'>
                     <div className='w-[100%] gap-8 flex flex-col '>
                         <div className='overflow-hidden relative'>
                             <img className='duration-500 hover:scale-105' src={bannerc11} alt="" />
