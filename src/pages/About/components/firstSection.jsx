@@ -8,7 +8,6 @@ export const FirstSectionAbout = () => {
         <>
             <div className='max-[430px]:py-20' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
                 <p className='text-5xl py-20 max-[430px]:p-0  text-center text-white'> ABOUT </p>
-
             </div>
             <div className='flex justify-center '>
                 <div className='flex  w-[80%] justify-center py-24 max-[430px]:py-16 items-end max-[430px]:items-center  max-[430px]:w-[95%] max-[430px]:flex-col '>

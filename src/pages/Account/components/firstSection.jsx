@@ -6,14 +6,14 @@ export const FirstSectionAccount = () => {
     return (
         <>
             <div className="flex flex-col items-center bg-white ">
-                <div className="flex justify-start w-[80%] pl-10 py-8">
+                <div className="flex justify-start w-[100%] pl-10 py-8">
                     <div onClick={() => { navigate('/') }} className="flex items-center hover:text-red-600">
                         <p >home</p>
                         <GoChevronRight className="pt-1 text-xl" />
                     </div>
                     <p onClick={() => { navigate('/account') }} className="hover:text-red-600" > Account</p>
                 </div>
-                <div className="flex w-[95vw] max-[430px]:flex-col  gap-6 pt-16 pb-10 ">
+                <div className="flex w-[80vw] max-[430px]:w-[95vw] max-[430px]:flex-col  gap-6 pt-16 pb-10 ">
                     <div className="flex flex-col w-[100%] bg-white border p-4 h-[fit-content]">
                         <p className="text-3xl">New Customer</p>
                         <b className="text-[#988b88]">Register Account</b>

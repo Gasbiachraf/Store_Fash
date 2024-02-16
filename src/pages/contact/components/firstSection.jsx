@@ -43,8 +43,8 @@ export const FirstSectionContact = () => {
                     <form ref={form} className='flex flex-col p-2 max-[430px]:p-0' onSubmit={sendEmail}>
 
                         <input className=' mt-4 bg-transparent border-2 rounded  ' placeholder="Name" type="text" name="user_name" />
-                        <input className=' mt-4 bg-transparent border-2 rounded  ' placeholder="Email" type="text" name="from_name" />
-                        <input className=' mt-4 bg-transparent border-2 rounded  ' type="email" placeholder="Phone" name="user_email" />
+                        <input className=' mt-4 bg-transparent border-2 rounded  ' placeholder="Email" type="email" name="user_email" />
+                        <input className=' mt-4 bg-transparent border-2 rounded  ' type="number" placeholder="phone" name="from_name" />
                         <textarea className=' mt-4 bg-transparent border-2 rounded  h-[20vh]  ' placeholder="Message" type="text" name="message" />
                         <input className='bg-[#222222] mt-4 py-2  w-[30%] text-white rounded-full border-2   ' type="submit" value="Send" />
                     </form>
