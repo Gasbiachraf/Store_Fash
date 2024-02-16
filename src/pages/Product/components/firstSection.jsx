@@ -6,7 +6,7 @@ import { MyContext } from "../../../utils/ContextProvider";
 import photo from '../../../assets/img/item-12.jpg'
 export const FirstSectionProduct = () => {
     const navigate = useNavigate()
-    let [product, useProduct] = useContext(MyContext)
+    let [product, useProduct,panier , setPanier] = useContext(MyContext)
     const { idProduct } = useParams();
     let productSpecific = product.filter(element => element.id == idProduct)
 
