@@ -46,7 +46,9 @@ export const FirstSectionProduct = () => {
                             <p className="border  px-3 text-2xl">XL</p>
                         </div>
                         <div className=" flex gap-4">
-                            <input type="number" min={1} />
+                            <button className="bg-gray-200 p-4 text-xl">-</button>
+                            <input type="number" value={productSpecific[0].number} min={1} />
+                            <button className="bg-gray-200 p-4 text-xl">+</button>
                             <button className=" bg-black text-white px-5 rounded-full py-1">ADD TO CARD</button>
                         </div>
                         <div className="flex gap-10 pt-20">

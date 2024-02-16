@@ -23,13 +23,14 @@ export const NavbarFashe = () => {
 
 
     let [product, useProduct, panier, setPanier] = useContext(MyContext)
+    
     let totalPrice = 0 
+    let totalElement = 0
     
     panier.forEach(element => {
         let PriceTotal = element.price * element.number ;
         totalPrice = totalPrice+PriceTotal ;
-        
-        
+        totalElement = totalElement+element.number
     });
 
     return (
@@ -42,7 +43,7 @@ export const NavbarFashe = () => {
                 </Navbar.Brand>
                 <div className="flex items-center md:order-2 pr-2">
                     <FaRegCircleUser onClick={() => { navigate('./account') }} className='text-2xl' /> <span className='text-2xl text-[#dad7d0] px-3'>|</span>
-                    <SlBasket className='text-2xl max-[430px]:mr-2' onClick={() => { setBoolean(!boolean) }} />
+                    <SlBasket className='text-2xl max-[430px]:mr-2' onClick={() => { setBoolean(!boolean) }} />({totalElement})
 
                     <Navbar.Toggle />
                 </div>
@@ -69,14 +70,11 @@ export const NavbarFashe = () => {
                                 </>)
                         }
                     </div>
-                    <p className='text-end pt-4'>Subtotal : $ {totalPrice}</p>
+                    <p className='text-end pt-4'>Total : $ {totalPrice}</p>
                     <div className='pt-8 flex justify-between'>
                         <button onClick={()=>{navigate('/cart')}} className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>VIEW CART</button>
                         <button className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>CHECKOUT</button>
                     </div>
-
-
-
                 </div>
             </div>
 
