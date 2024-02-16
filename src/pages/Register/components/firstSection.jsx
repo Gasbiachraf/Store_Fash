@@ -6,6 +6,7 @@ export const FirstSectionRegister = () => {
     const navigate = useNavigate()
     return (
         <>
+        <div className='h-[8.5vh]'></div>
             <div className="flex items-center  max-[430px]:pl-3 pl-10 py-8">
                 <div onClick={()=>{navigate('/')}} className="flex items-center hover:text-red-600">
                     <p >home</p>

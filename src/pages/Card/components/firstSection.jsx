@@ -3,6 +3,7 @@ import firstpicture from '../../../assets/img/item-15.jpg'
 export const FirstSectionCart = () => {
     return (
         <>
+        <div className='h-[8.5vh]'></div>
         <div className='max-[430px]:py-20' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
                 <p className='text-5xl py-20 max-[430px]:p-0  text-center text-white'> YOUR SHOPPING CART </p>
         </div>

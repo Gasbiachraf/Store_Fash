@@ -5,6 +5,7 @@ export const FirstSectionAccount = () => {
     const navigate = useNavigate()
     return (
         <>
+            <div className='h-[8.5vh]'></div>
             <div className="flex flex-col items-center bg-white ">
                 <div className="flex justify-start w-[100%] pl-10 py-8">
                     <div onClick={() => { navigate('/') }} className="flex items-center hover:text-red-600">

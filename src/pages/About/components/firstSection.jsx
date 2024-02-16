@@ -6,7 +6,8 @@ import woman from '../../../assets/img/banner-14.jpg'
 export const FirstSectionAbout = () => {
     return (
         <>
-            <div className='max-[430px]:py-20' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
+            <div className='h-[8.5vh]'></div>
+            <div className='max-[430px]:py-20 ' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
                 <p className='text-5xl py-20 max-[430px]:p-0  text-center text-white'> ABOUT </p>
             </div>
             <div className='flex justify-center '>

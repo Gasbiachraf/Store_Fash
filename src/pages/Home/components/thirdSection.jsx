@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../../utils/ContextProvider";
 import photo from "../../../assets/img/banner-02.jpg";
+import { useNavigate } from "react-router-dom";
 
 
 
 export const ThirdSectionHome = () => {
+    const navigate = useNavigate()
 
     let [product, useProduct] = useContext(MyContext)
     const [category, setCategory] = useState('Old')
@@ -35,7 +37,7 @@ export const ThirdSectionHome = () => {
                                 < >
                                     <div key={index} className=" flex flex-col w-[23%] max-[430px]:w-[96%] max-[430px]:items-center">
                                         <img src={element.img} alt="" />
-                                        <p className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
+                                        <p onClick={()=>{navigate(`/product/${element.id}`)}} className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
                                         <div className="flex justify-between text-[#767676]">
                                             <p className="text-xl">${element.price} </p>
                                             <p className="text-xl ">({element.category}) </p>

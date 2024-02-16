@@ -25,6 +25,9 @@ export const FirstSectionHome = () => {
     ])
     return (
         <>
+
+
+        
             {/* // ^^ Carousel : */}
             <section>
                 <div className="h-30 sm:h-64 xl:h-80 2xl:h-[60vh] ">

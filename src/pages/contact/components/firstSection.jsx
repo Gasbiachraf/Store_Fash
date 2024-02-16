@@ -30,6 +30,7 @@ export const FirstSectionContact = () => {
     // ^^ fin emailjs :
     return (
         <>
+        <div className='h-[8.5vh]'></div>
         <div  style={{backgroundImage :`url(${bgImage})`, backgroundSize :"cover"}}>
            <p className='text-5xl py-20 text-center text-white'> CONTACT </p>
         </div>

@@ -4,14 +4,17 @@ import bgImage from '../../../assets/img/heading-pages-02.jpg'
 import { MyContext } from '../../../utils/ContextProvider';
 import { CiSearch } from "react-icons/ci";
 import './firstSection.sass'
+import { useNavigate } from 'react-router-dom';
 
 
 export const FirstSectionShop = () => {
 
+    const navigate = useNavigate()
+
 
     let [product, useProduct] = useContext(MyContext)
     const [category, setCategory] = useState('Old')
-    const [categoryPrice, setCategoryPrice] = useState([0,20])
+    const [categoryPrice, setCategoryPrice] = useState([0, 20])
     const [categoryPriceLenght, setCategoryPriceLenght] = useState([])
     const [specificCategory, setSpecificCategory] = useState([])
     let arrayOld = product.filter(element => element.category == 'Old');
@@ -21,14 +24,14 @@ export const FirstSectionShop = () => {
         const ChoiceCategory = () => {
             let array = product.filter(element => element.category == category);
             let arrayPrice = array.filter(element => ((element.price > categoryPrice[0]) && (element.price <= categoryPrice[1])))
-            console.log( categoryPrice[0]);
-            console.log( categoryPrice[1]);
+            console.log(categoryPrice[0]);
+            console.log(categoryPrice[1]);
             setCategoryPriceLenght(arrayPrice)
 
             setSpecificCategory(arrayPrice)
         }
         ChoiceCategory()
-    }, [categoryPrice , category]);
+    }, [categoryPrice, category]);
 
     const TextChange = (parames) => {
         if (parames == 'Old') {
@@ -43,6 +46,7 @@ export const FirstSectionShop = () => {
 
     return (
         <>
+            <div className='h-[8.5vh]'></div>
             <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}>
                 <p className='text-5xl py-20 text-center text-white'> PRODUCTS </p>
             </div>
@@ -59,11 +63,11 @@ export const FirstSectionShop = () => {
                             <b className='text-xl pb-4'>Price</b>
                             <form className='flex flex-col' action="">
                                 <div>
-                                    <input onClick={()=>{setCategoryPrice([0 , 20])}} type='radio' name='achraf' />
+                                    <input onClick={() => { setCategoryPrice([0, 20]) }} type='radio' name='achraf' />
                                     <label className='pl-2' htmlFor="">0-20</label>
                                 </div>
                                 <div>
-                                    <input onClick={()=>{setCategoryPrice([20 , 40])}} type='radio' name='achraf' />
+                                    <input onClick={() => { setCategoryPrice([20, 40]) }} type='radio' name='achraf' />
                                     <label className='pl-2' htmlFor="">20-40</label>
                                 </div>
                             </form>
@@ -111,7 +115,7 @@ export const FirstSectionShop = () => {
                                         < >
                                             <div key={index} className=" flex flex-col w-[32%] max-[430px]:w-[100%]    pb-6">
                                                 <img className=' ' src={element.img} alt="" />
-                                                <p className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
+                                                <p onClick={()=>{navigate(`/product/${element.id}`)}} className="text-lg pt-4 text-[#767676]  hover:text-red-600 duration-300">{element.text} </p>
                                                 <div className="flex justify-between text-[#767676]">
                                                     <p className="text-xl">${element.price} </p>
                                                     <p className="text-xl ">({element.category}) </p>
