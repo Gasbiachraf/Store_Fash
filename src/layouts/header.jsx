@@ -6,7 +6,7 @@ import avatare from '../assets/img/avatar-man.webp'
 import { SlBasket } from "react-icons/sl";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './header.sass'
 
 import photo from '../assets/img/item-12.jpg'
@@ -23,27 +23,32 @@ export const NavbarFashe = () => {
 
 
     let [product, useProduct, panier, setPanier] = useContext(MyContext)
-    
-    let totalPrice = 0 
+
+    let totalPrice = 0
     let totalElement = 0
-    
+
     panier.forEach(element => {
-        let PriceTotal = element.price * element.number ;
-        totalPrice = totalPrice+PriceTotal ;
-        totalElement = totalElement+element.number
+        let PriceTotal = element.price * element.number;
+        totalPrice = totalPrice + PriceTotal;
+        totalElement = totalElement + element.number
     });
+    const [productCount, setProductCount] = useState(0)
+    useEffect(() => {
+        setProductCount(panier.length)
+    }, [panier.length])
 
     return (
 
         <>
             <Navbar fluid rounded className='bg-white  py-4 border-b-2 fixed z-10 w-[100%] '>
-                <Navbar.Brand className='ml-10' href="https://flowbite-react.com">
-                    <img src={logo} className="mr-3 h-6 sm:h-7 " alt="Flowbite React Logo" />
+                <Navbar.Brand className='ml-10' >
+                    <img src={logo} onClick={() => { navigate('/') }} className="mr-3 h-6 sm:h-7 " alt="Flowbite React Logo" />
 
                 </Navbar.Brand>
                 <div className="flex items-center md:order-2 pr-2">
                     <FaRegCircleUser onClick={() => { navigate('./account') }} className='text-2xl' /> <span className='text-2xl text-[#dad7d0] px-3'>|</span>
-                    <SlBasket className='text-2xl max-[430px]:mr-2' onClick={() => { setBoolean(!boolean) }} />({totalElement})
+                    <SlBasket className='text-2xl max-[430px]:mr-2 relative' onClick={() => { setBoolean(!boolean) }} />
+                    <div className='absolute right-2 bg-[#e65540] w-[20px] flex justify-center items-center  text-white h-[20px] rounded-full top-3 max-[430px]:right-14'>{productCount}</div>
 
                     <Navbar.Toggle />
                 </div>
@@ -60,7 +65,7 @@ export const NavbarFashe = () => {
                         {
                             panier.map((element, index) =>
                                 <>
-                                    <div className=' flex h-[35%] gap-4'>
+                                    <div key={index} className=' flex h-[35%] gap-4'>
                                         <img src={element.img} alt="" />
                                         <div>
                                             <p>{element.text}</p>
@@ -72,7 +77,7 @@ export const NavbarFashe = () => {
                     </div>
                     <p className='text-end pt-4'>Total : $ {totalPrice}</p>
                     <div className='pt-8 flex justify-between'>
-                        <button onClick={()=>{navigate('/cart')}} className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>VIEW CART</button>
+                        <button onClick={() => { navigate('/cart') }} className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>VIEW CART</button>
                         <button className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>CHECKOUT</button>
                     </div>
                 </div>

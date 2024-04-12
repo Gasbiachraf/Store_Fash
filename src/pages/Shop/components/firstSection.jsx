@@ -1,11 +1,13 @@
 
 import { useContext, useEffect, useState } from 'react';
 import bgImage from '../../../assets/img/heading-pages-02.jpg'
+import GifModal from "../../../assets/img/donegif3.gif";
 import { MyContext } from '../../../utils/ContextProvider';
 import { CiSearch } from "react-icons/ci";
 import './firstSection.sass'
 import { useNavigate } from 'react-router-dom';
 
+import { Button, Modal } from 'flowbite-react';
 
 export const FirstSectionShop = () => {
 
@@ -43,17 +45,25 @@ export const FirstSectionShop = () => {
         }
 
     }
-    const AddToCard =(parames)=>{
+
+    const [nameProduct , setNameProduct] = useState("")
+    const [openModal, setOpenModal] = useState(false);
+    const arrayPanier = [...panier]
+
+    const AddToCard = (parames) => {
         let productAdd = product.filter(element => element.id == parames)
         let questionPanier = panier.filter(element => element.id == parames)
         if (questionPanier.length == 0) {
-            panier.push(productAdd[0])
-            console.log(panier);
-        }else{
+            arrayPanier.push(productAdd[0])
+            setPanier(arrayPanier)
+
+        } else {
             // alert('product already exist')
             let productplus = panier.filter(element => element.id == parames)
             productplus[0].number++
         }
+        setOpenModal(true)
+        setNameProduct(productAdd[0].text)
     }
 
     return (
@@ -137,6 +147,24 @@ export const FirstSectionShop = () => {
                                                 </div>
 
                                             </div>
+                                            <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+                                                <Modal.Header className="bg-[#eceff1]" />
+                                                <Modal.Body className="bg-[#eceff1]">
+                                                    <div style={{ backgroundImage: `url(${GifModal})`, backgroundSize: 'cover' }} className="text-center border-2 border-green-400 rounded-xl h-[40vh] bg-[#eceff1]">
+
+
+                                                        <h3 className="mb-4 text-current   text-xl font-normal text-gray-500 dark:text-gray-400 pt-10">
+                                                            {nameProduct}
+                                                        </h3>
+                                                        <h6 className="mb-4 pt-28 pl-8">is added to cart !</h6>
+                                                        <div className="flex justify-end gap-4">
+                                                            <Button className="mr-4  bg-green-400  " onClick={() => setOpenModal(false)}>
+                                                                Ok
+                                                            </Button>
+                                                        </div>
+                                                    </div>
+                                                </Modal.Body>
+                                            </Modal>
                                         </>)
                                 }
 
