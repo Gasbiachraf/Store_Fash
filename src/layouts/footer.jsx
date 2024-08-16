@@ -61,7 +61,6 @@ export const FooterFashe = () => {
                 <div className='text-center  pb-8 max-[430px]: pt-16'>
                     <p className='text-[#b9b7b5]'>Copyright © 2022 Shopify Theme Developed by <a className='underline font-bold' target='_blank' href="https://portfolio-achrafgasbi.vercel.app/">Achraf GASBI</a> All rights reserved.</p>
                 </div>
-
             </div>
         </Footer>
     );

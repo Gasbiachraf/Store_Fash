@@ -85,7 +85,7 @@ export const FirstSectionShop = () => {
                             <b className='text-xl pb-4'>Price</b>
                             <form className='flex flex-col' action="">
                                 <div>
-                                    <input onClick={() => { setCategoryPrice([0, 20]) }} type='radio' name='achraf' />
+                                    <input checked onClick={() => { setCategoryPrice([0, 20]) }} type='radio' name='achraf' />
                                     <label className='pl-2' htmlFor="">0-20</label>
                                 </div>
                                 <div>

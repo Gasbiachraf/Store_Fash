@@ -35,7 +35,7 @@ export const NavbarFashe = () => {
     const [productCount, setProductCount] = useState(0)
     useEffect(() => {
         setProductCount(panier.length)
-    }, [panier.length])
+    }, [panier.length]) 
 
     return (
 
@@ -60,12 +60,12 @@ export const NavbarFashe = () => {
                 </Navbar.Collapse>
             </Navbar>
             <div className={` ${boolean ? 'block' : 'hidden'}`}>
-                <div className='shadow-xl rounded-lg bg-white mt-[8.9vh] max-[430px]:mt-[11vh] max-[430px]:w-[70%] w-[25%] h-[71vh] fixed z-10 right-2 p-5'>
-                    <div className='flex flex-col h-[75%] gap-4 overflow-y-auto scroll'>
+                <div className='shadow-xl rounded-lg bg-white mt-[8.9vh] max-[430px]:mt-[11vh] max-[430px]:w-[80%] w-[25%] h-[85vh] fixed z-10 right-2 p-5'>
+                    <div className='flex flex-col h-[80%] gap-4 overflow-y-auto scroll'>
                         {
                             panier.map((element, index) =>
                                 <>
-                                    <div key={index} className=' flex h-[35%] gap-4'>
+                                    <div key={index} className=' flex h-[22%] gap-4'>
                                         <img src={element.img} alt="" />
                                         <div>
                                             <p>{element.text}</p>
@@ -76,9 +76,9 @@ export const NavbarFashe = () => {
                         }
                     </div>
                     <p className='text-end pt-4'>Total : $ {totalPrice}</p>
-                    <div className='pt-8 flex justify-between'>
-                        <button onClick={() => { navigate('/cart') }} className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>VIEW CART</button>
-                        <button className='bg-[#111111] text-white py-2 max-[430px]:text-sm max-[430px]:px-6 px-10 rounded-full hover:bg-red-600 duration-300'>CHECKOUT</button>
+                    <div className=' flex mt-4 gap-4 justify-between'>
+                        <button onClick={() => { navigate('/cart') }} className='bg-[#111111] text-white py-2 max-[430px]:text-sm  w-[50%] rounded-full hover:bg-red-600 duration-300'>VIEW CART</button>
+                        <button className='bg-[#111111] text-white py-2 max-[430px]:text-sm   rounded-full w-[50%] hover:bg-red-600 duration-300'>CHECKOUT</button>
                     </div>
                 </div>
             </div>
